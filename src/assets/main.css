@@ -1,0 +1,27 @@
+.main__body {
+    background-color: #fafafa;
+    padding-top: 20px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.login__page {
+    margin-top: 15px;
+    padding-bottom: 25px;
+    vertical-align: middle;
+}
+
+
+.voice__card {
+    padding: 20px;
+    /*margin: 20px 0;*/
+}
+
+/*.card {
+  background-color: #fff;
+  /*box-shadow: 0 0 2px 0 rgba(151, 151, 151, 0.28);*/
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgba(151, 151, 151, 0.20)
+}*/
