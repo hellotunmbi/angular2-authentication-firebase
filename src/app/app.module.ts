@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
 import { AuthService } from './services/auth.service';
+import { AuthGuard } from 'app/services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AuthService } from './services/auth.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
