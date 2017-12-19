@@ -18,6 +18,10 @@
           <li><a>About</a></li>
           <li><a>Contact</a></li>
         </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" (click)="authService.logout()">Logout</a></li>
+        </ul>
         
       </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -27,8 +31,11 @@
   <div class="jumbotron">
     <h1>Welcome to Dashboard</h1>
     <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>
-      <a class="btn btn-lg btn-primary" href="" role="button">Hello</a>
+    <p *ngIf="!authService.isLoggedIn()">
+      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Login</a>
+    </p>
+    <p *ngIf="authService.isLoggedIn()">
+      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Logout</a>
     </p>
   </div>
 
