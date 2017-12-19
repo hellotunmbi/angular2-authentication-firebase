@@ -10,10 +10,8 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent implements OnInit {
 
   user = null;
-  
 
-  constructor(private authService: AuthService, private router: Router) { 
-    
+  constructor(private authService: AuthService, private router: Router) {
   }
 
 
@@ -28,7 +26,7 @@ export class LoginComponent implements OnInit {
 
     signInWithFacebook() {
       this.authService.signInWithFacebook()
-      .then((res) => { 
+      .then((res) => {
           this.router.navigate(['dashboard'])
         })
       .catch((err) => console.log(err));
@@ -37,7 +35,7 @@ export class LoginComponent implements OnInit {
 
     signInWithGoogle() {
       this.authService.signInWithGoogle()
-      .then((res) => { 
+      .then((res) => {
           this.router.navigate(['dashboard'])
         })
       .catch((err) => console.log(err));
