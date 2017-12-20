@@ -46,6 +46,18 @@ export class AuthService {
     )
   }
 
+  signInWithGithub() {
+    return this._firebaseAuth.auth.signInWithPopup(
+      new firebase.auth.GithubAuthProvider()
+    )
+  }
+
+  signInRegular() {
+    return this._firebaseAuth.auth.signInWithPopup(
+      new firebase.auth.EmailAuthProvider()
+    )
+  }
+
 
   isLoggedIn() {
   if (this.userDetails == null ) {
