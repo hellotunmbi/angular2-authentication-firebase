@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutes } from './app.routes';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
@@ -25,6 +27,7 @@ import { AuthGuard } from 'app/services/auth-guard.service';
   imports: [
     BrowserModule,
     AppRoutes,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule
